@@ -52,6 +52,8 @@ input:focus { border-color: #ef4538; }
 .brief-copy .job-requirements { color: #f3f2ee; font-weight: 600; }
 .entry-card { margin-top: 30px; padding: 25px; border-radius: 12px; background: #f3f2ee; color: #090909; display: flex; justify-content: space-between; gap: 24px; align-items: center; }
 .entry-card p { max-width: 530px; margin: 12px 0 0; line-height: 1.4; }
+.entry-requirements { margin: 10px 0 0; padding-left: 20px; line-height: 1.45; }
+.entry-requirements li::marker { color: #ef4538; }
 .entry-card .primary-button { background: #e84437; color: #fff; flex: none; }
 .entry-card .primary-button span { color: #fff; }
 @media (max-width: 700px) { .site-shell { padding: 18px 20px 36px; } .site-header p { display: none; } .landing { padding-top: 92px; } h1 { font-size: clamp(49px, 16vw, 72px); } .stat-row { grid-template-columns: 1fr; } .stat-row div + div { border-left: 0; border-top: 1px solid #252525; } .form-row, .brief-copy, .entry-card { display: grid; grid-template-columns: 1fr; } .brief-card { grid-template-columns: 1fr; gap: 22px; } .entry-card .primary-button { justify-content: center; } }

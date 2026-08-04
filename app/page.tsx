@@ -138,7 +138,12 @@ export default function Home() {
           <div className="entry-card">
             <div>
               <span>YOUR ENTRY</span>
-              <p>Make your own brand name, one-line description and hero visual. Then quote the challenge post with all three.</p>
+              <p>Quote the challenge post with your hero visual. Your copy must include:</p>
+              <ul className="entry-requirements">
+                <li>the brand name</li>
+                <li>the brand's one-liner</li>
+                <li>"Entry for the @stackdailyxyz $500 Brand Challenge"</li>
+              </ul>
             </div>
             <a className="primary-button" href="https://x.com/stackdailyxyz" target="_blank" rel="noreferrer">Open the challenge post <span>→</span></a>
           </div>
