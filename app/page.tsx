@@ -8,39 +8,33 @@ type Brief = {
   id: string;
   category: string;
   brief: string;
-  direction: string;
 };
 
 const briefs: Brief[] = [
   {
-    id: "morrow",
-    category: "Food / drink",
-    brief: "Create a functional soda for people who work too late and still want their evening back.",
-    direction: "Your hero visual should make one can feel like a small, bright interruption to a long day."
+    id: "food",
+    category: "Food",
+    brief: "Create a fictional food brand for people who work late and want something quick, satisfying and better than takeaway. Make it modern without making it look like a wellness product."
   },
   {
-    id: "caldera",
-    category: "Mobility",
-    brief: "Create a compact electric car brand for people who leave the city whenever they get the chance.",
-    direction: "Your hero visual should feel open-road, considered and quietly expensive."
+    id: "automotive",
+    category: "Automotive",
+    brief: "Create a fictional small electric car brand for people living in crowded cities. Make it desirable, practical and culturally relevant rather than technical."
   },
   {
-    id: "tide",
-    category: "Travel",
-    brief: "Create a members-only coastal stay for people who want an off-season escape without the performance of luxury travel.",
-    direction: "Your hero visual should make the place feel real enough to book, but still slightly out of reach."
+    id: "fashion",
+    category: "Fashion",
+    brief: "Create a fictional clothing brand for people moving between work, social plans and late nights. Make it considered and wearable without defaulting to obvious luxury."
   },
   {
-    id: "verygood",
-    category: "Personal care",
-    brief: "Create a refillable skincare brand with one product that does one job extremely well.",
-    direction: "Your hero visual should feel tactile, simple and impossible to scroll past."
+    id: "travel-hospitality",
+    category: "Travel and hospitality",
+    brief: "Create a fictional travel or hospitality brand for people who want to experience a city properly rather than stay somewhere generic. Make it specific, memorable and easy to imagine using."
   },
   {
-    id: "relay",
-    category: "Culture / tech",
-    brief: "Create a small, members-first listening club that turns new music into real-world nights out.",
-    direction: "Your hero visual should feel like a discovery you would send to a friend at 1am."
+    id: "consumer-technology",
+    category: "Consumer technology",
+    brief: "Create a fictional technology brand that solves one everyday frustration. Make it immediately understandable and useful before it feels futuristic."
   }
 ];
 
@@ -140,7 +134,6 @@ export default function Home() {
               <span>YOUR JOB</span>
               <p>{brief.brief}</p>
               <p className="job-requirements">Give the brand a name. Write a one-line description for your X post. Create one finished hero visual.</p>
-              <p className="job-direction">{brief.direction}</p>
             </div>
           </div>
           <div className="entry-card">
