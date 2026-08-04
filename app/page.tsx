@@ -20,12 +20,12 @@ const briefs: Brief[] = [
   {
     id: "automotive",
     category: "Automotive",
-    brief: "Create a fictional small electric car brand for people living in crowded cities. Make it desirable, practical and culturally relevant rather than technical."
+    brief: "Create a fictional small electric car brand for people living in crowded cities. Make it desirable, practical and culturally relevant rather than super technical."
   },
   {
     id: "fashion",
     category: "Fashion",
-    brief: "Create a fictional clothing brand for people moving between work, social plans and late nights. Make it considered and wearable without defaulting to obvious luxury."
+    brief: "Create a fictional clothing brand for people moving between work, social plans and late nights. Make it versatile and realistically wearable, rather than hyper-luxury."
   },
   {
     id: "travel-hospitality",
@@ -35,7 +35,7 @@ const briefs: Brief[] = [
   {
     id: "consumer-technology",
     category: "Consumer technology",
-    brief: "Create a fictional technology brand that solves one everyday frustration. Make it immediately understandable and useful before it feels futuristic."
+    brief: "Create a fictional technology brand that solves one everyday problem that you have - or that others might. Try to make it immediately understandable and useful, rather than simply futuristic."
   }
 ];
 
