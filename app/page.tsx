@@ -89,7 +89,7 @@ export default function Home() {
         <section className="landing" id="top">
           <div className="eyebrow">StackDaily x Open Campus</div>
           <h1>GET A BRAND BRIEF.<br />MAKE IT YOURS.<br /><em>WIN $500.</em></h1>
-          <p className="lead">Five fictional brand briefs. One finished hero visual. Your entry could win $500 and be reviewed live by a top AI creative.</p>
+          <p className="lead">Behind this button is a randomised fictional brand brief and your instructions. Your entry could win $500 and be reviewed live by a top AI creative.</p>
           <button className="primary-button" onClick={start}>Sign up to take part in the brand contest <span>→</span></button>
           <div className="landing-rule" />
           <div className="stat-row" aria-label="Contest details">
