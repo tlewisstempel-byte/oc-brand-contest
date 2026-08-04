@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 
-type Step = "landing" | "signup" | "brief";
+type Step = "landing" | "signup" | "reveal" | "brief";
 
 type Brief = {
   id: string;
@@ -66,6 +66,7 @@ export default function Home() {
   const [step, setStep] = useState<Step>("landing");
   const [email, setEmail] = useState("");
   const [brief, setBrief] = useState<Brief | null>(null);
+  const [revealIndex, setRevealIndex] = useState(0);
 
   useEffect(() => {
     const savedBrief = window.localStorage.getItem("oc-brand-brief");
@@ -75,13 +76,36 @@ export default function Home() {
     }
   }, []);
 
+  useEffect(() => {
+    if (step !== "reveal" || !brief) return;
+
+    const allocatedIndex = briefs.findIndex((item) => item.id === brief.id);
+    let tick = 0;
+    const interval = window.setInterval(() => {
+      tick += 1;
+      setRevealIndex(tick >= 24 ? allocatedIndex : tick % briefs.length);
+    }, 90);
+
+    const complete = window.setTimeout(() => {
+      window.clearInterval(interval);
+      setRevealIndex(allocatedIndex);
+      setStep("brief");
+    }, 2700);
+
+    return () => {
+      window.clearInterval(interval);
+      window.clearTimeout(complete);
+    };
+  }, [brief, step]);
+
   function submitSignup(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!email.trim()) return;
     window.localStorage.setItem("oc-brand-signup", email.trim());
     const allocated = getBrief();
     setBrief(allocated);
-    setStep("brief");
+    setRevealIndex(0);
+    setStep("reveal");
   }
 
   function start() {
@@ -126,6 +150,14 @@ export default function Home() {
             </div>
           </form>
           <p className="fine-print">The production version will continue through OC ID, then return here with the same brief.</p>
+        </section>
+      )}
+
+      {step === "reveal" && brief && (
+        <section className="reveal-panel" aria-live="polite">
+          <div className="eyebrow">OC ID CONFIRMED</div>
+          <p>ASSIGNING YOUR BRAND BRIEF</p>
+          <h1 key={revealIndex}>{briefs[revealIndex].category}</h1>
         </section>
       )}
 
