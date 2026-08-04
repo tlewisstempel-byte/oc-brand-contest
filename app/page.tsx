@@ -142,7 +142,7 @@ export default function Home() {
               <ul className="entry-requirements">
                 <li>the brand name</li>
                 <li>the brand's one-liner</li>
-                <li>"Entry for the @stackdailyxyz $500 Brand Challenge"</li>
+                <li>the fact that this is an entry for the @stackdailyxyz $500 brand challenge</li>
               </ul>
             </div>
             <a className="primary-button" href="https://x.com/stackdailyxyz" target="_blank" rel="noreferrer">Open the challenge post <span>→</span></a>
