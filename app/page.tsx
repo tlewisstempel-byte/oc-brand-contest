@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useState } from "react";
 
 type Step = "landing" | "signup" | "reveal" | "brief";
+type RevealPhase = "cycling" | "selected" | "blackout";
 
 type Brief = {
   id: string;
@@ -67,6 +68,7 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [brief, setBrief] = useState<Brief | null>(null);
   const [revealIndex, setRevealIndex] = useState(0);
+  const [revealPhase, setRevealPhase] = useState<RevealPhase>("cycling");
 
   useEffect(() => {
     const savedBrief = window.localStorage.getItem("oc-brand-brief");
@@ -80,21 +82,39 @@ export default function Home() {
     if (step !== "reveal" || !brief) return;
 
     const allocatedIndex = briefs.findIndex((item) => item.id === brief.id);
-    let tick = 0;
-    const interval = window.setInterval(() => {
-      tick += 1;
-      setRevealIndex(tick >= 24 ? allocatedIndex : tick % briefs.length);
-    }, 90);
+    const sequence = [
+      ...briefs.map((_, index) => index),
+      ...briefs.map((_, index) => index),
+      ...briefs.slice(0, allocatedIndex + 1).map((_, index) => index),
+    ];
+    const timers: number[] = [];
+    let position = 0;
 
-    const complete = window.setTimeout(() => {
-      window.clearInterval(interval);
+    const schedule = (callback: () => void, delay: number) => {
+      timers.push(window.setTimeout(callback, delay));
+    };
+
+    const advance = () => {
+      position += 1;
+      if (position < sequence.length) {
+        setRevealIndex(sequence[position]);
+        schedule(advance, 240);
+        return;
+      }
+
       setRevealIndex(allocatedIndex);
-      setStep("brief");
-    }, 2700);
+      setRevealPhase("selected");
+      schedule(() => {
+        setRevealPhase("blackout");
+        schedule(() => setStep("brief"), 280);
+      }, 620);
+    };
 
+    setRevealPhase("cycling");
+    setRevealIndex(sequence[0]);
+    schedule(advance, 240);
     return () => {
-      window.clearInterval(interval);
-      window.clearTimeout(complete);
+      timers.forEach((timer) => window.clearTimeout(timer));
     };
   }, [brief, step]);
 
@@ -105,6 +125,7 @@ export default function Home() {
     const allocated = getBrief();
     setBrief(allocated);
     setRevealIndex(0);
+    setRevealPhase("cycling");
     setStep("reveal");
   }
 
@@ -113,7 +134,7 @@ export default function Home() {
   }
 
   return (
-    <main className="site-shell">
+    <main className={`site-shell ${step === "reveal" && revealPhase === "blackout" ? "is-blackout" : ""}`}>
       <header className="site-header">
         <a className="wordmark" href="#top" aria-label="StackDaily">
           <span>stac<span>k</span></span><small>daily</small>
@@ -154,7 +175,7 @@ export default function Home() {
       )}
 
       {step === "reveal" && brief && (
-        <section className="reveal-panel" aria-live="polite">
+        <section className={`reveal-panel reveal-${revealPhase}`} aria-live="polite">
           <div className="eyebrow">OC ID CONFIRMED</div>
           <p>ASSIGNING YOUR BRAND BRIEF</p>
           <h1 key={revealIndex}>{briefs[revealIndex].category}</h1>
