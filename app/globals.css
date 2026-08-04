@@ -16,10 +16,11 @@ button { cursor: pointer; }
 h1 { margin: 0; font-size: clamp(54px, 8.1vw, 118px); line-height: .88; font-weight: 800; letter-spacing: -.085em; }
 h1 em { color: #ef4538; font-style: normal; }
 .lead { max-width: 570px; margin: 36px auto 32px; color: #adadad; font-size: 19px; line-height: 1.45; letter-spacing: -.02em; }
-.primary-button { border: 0; background: #f4f4f1; color: #070707; border-radius: 999px; padding: 15px 19px; display: inline-flex; align-items: center; justify-content: center; gap: 28px; font-size: 14px; font-weight: 700; text-decoration: none; transition: transform .2s ease, background .2s ease; }
-.landing .primary-button { min-width: min(100%, 420px); min-height: 78px; padding: 22px 34px; font-size: 18px; }
-.primary-button:hover { transform: translateY(-2px); background: #fff; }
-.primary-button span { color: #ef4538; font-size: 23px; line-height: 0; }
+.primary-button { border: 0; border-radius: 999px; background: #f4f4f1; color: #070707; padding: 15px 24px; display: inline-flex; align-items: center; justify-content: center; gap: 26px; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 700; letter-spacing: -.025em; line-height: 1; text-align: center; text-decoration: none; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+.landing .primary-button { min-width: min(100%, 540px); min-height: 82px; padding: 22px 34px; font-size: 18px; }
+.primary-button:hover { transform: translateY(-2px); background: #fff; box-shadow: 0 12px 30px rgba(0, 0, 0, .28); }
+.primary-button span { color: #ef4538; font-family: Arial, sans-serif; font-size: 25px; font-weight: 400; letter-spacing: 0; line-height: 1; }
+.landing .primary-button span { font-size: 30px; }
 .landing-rule { height: 1px; background: #252525; margin: 76px 0 0; }
 .stat-row { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid #252525; border-top: 0; border-radius: 0 0 12px 12px; overflow: hidden; text-align: left; }
 .stat-row div { min-height: 118px; padding: 26px; display: flex; flex-direction: column; justify-content: end; gap: 8px; }
