@@ -53,12 +53,12 @@ input { min-width: 0; flex: 1; border: 1px solid #313131; background: #101010; c
 input:focus { border-color: #ef4538; }
 .brief-panel { max-width: 1000px; }
 .brief-topline { display: flex; justify-content: space-between; color: #8a8a8a; font-size: 11px; letter-spacing: .1em; border-bottom: 1px solid #272727; padding-bottom: 14px; }
-.brief-card { padding: clamp(20px, 4vh, 38px) 0; display: grid; grid-template-columns: 76px 1fr; gap: 22px; border-bottom: 1px solid #272727; }
+.brief-card { padding: clamp(14px, 2.6vh, 26px) 0; display: grid; grid-template-columns: 76px 1fr; gap: 22px; border-bottom: 1px solid #272727; }
 .brief-index { color: #ef4538; font-size: 16px; font-weight: 700; }
 .brief-card h1 { width: min(100%, 760px); min-height: 1.76em; display: flex; align-items: flex-start; font-size: clamp(48px, 7vw, 88px); }
 .brand-line { max-width: 540px; margin: 14px 0 0; font-size: clamp(16px, 1.6vw, 19px); color: #b3b3b3; line-height: 1.35; }
-.brief-copy { padding: clamp(16px, 3vh, 26px) 0; border-bottom: 1px solid #272727; }
-.brief-copy div { border: 1px solid #2b2b2b; border-radius: 12px; padding: clamp(16px, 2vw, 22px); background: #111; }
+.brief-copy { padding: clamp(20px, 3.6vh, 32px) 0; border-bottom: 1px solid #272727; }
+.brief-copy div { border: 1px solid #2b2b2b; border-radius: 12px; padding: clamp(20px, 2.5vw, 30px); background: #111; }
 .brief-copy span, .entry-card span { color: #ef4538; font-size: 11px; font-weight: 700; letter-spacing: .1em; }
 .brief-copy p { margin: 10px 0 0; color: #b9b9b9; font-size: 14px; line-height: 1.4; }
 .brief-copy .job-requirements { color: #f3f2ee; font-weight: 600; }
