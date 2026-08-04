@@ -90,7 +90,7 @@ export default function Home() {
           <div className="eyebrow">StackDaily x Open Campus</div>
           <h1>GET A BRAND BRIEF.<br />MAKE IT YOURS.<br /><em>WIN $500.</em></h1>
           <p className="lead">Behind this button is a randomised fictional brand brief and your instructions. Your entry could win $500 and be reviewed live by a top AI creative.</p>
-          <button className="primary-button" onClick={start}>Sign up to take part in the brand contest <span>→</span></button>
+          <button className="primary-button" onClick={start}>UNLOCK YOUR BRAND BRIEF TO COMPETE <span>→</span></button>
           <div className="landing-rule" />
           <div className="stat-row" aria-label="Contest details">
             <div><strong>$500</strong><span>prize pool</span></div>
@@ -105,7 +105,7 @@ export default function Home() {
           <button className="back" onClick={() => setStep("landing")}>← Back</button>
           <div className="eyebrow">Step 01 / Open Campus ID</div>
           <h1>UNLOCK<br />YOUR BRIEF.</h1>
-          <p>Sign in to take part. This is a placeholder for the Open Campus ID handoff.</p>
+          <p>Create your OC ID to unlock your brief. This is a placeholder for the Open Campus ID handoff.</p>
           <form onSubmit={submitSignup}>
             <label htmlFor="email">Email address</label>
             <div className="form-row">
