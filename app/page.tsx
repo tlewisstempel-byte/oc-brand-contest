@@ -147,7 +147,7 @@ export default function Home() {
             </div>
             <a className="primary-button" href="https://x.com/stackdailyxyz" target="_blank" rel="noreferrer">Open the challenge post <span>→</span></a>
           </div>
-          <p className="fine-print">Entries are judged on clarity, originality, visual quality, how well the brand hangs together, and whether anyone would want to follow it.</p>
+          <p className="fine-print">Entries are judged on clear idea, distinctive point of view, visual quality, consistency, and brand potential.</p>
         </section>
       )}
     </main>
