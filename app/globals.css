@@ -36,7 +36,7 @@ h1 em { color: #ef4538; font-style: normal; }
 .reveal-panel { min-height: calc(100dvh - 82px); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; transition: opacity .28s ease; }
 .reveal-panel .eyebrow { margin-bottom: 18px; }
 .reveal-panel p { margin: 0 0 28px; color: #8d8d8d; font-size: 11px; font-weight: 700; letter-spacing: .14em; }
-.reveal-panel h1 { max-width: 900px; animation: reveal-category .2s ease both; }
+.reveal-panel h1 { width: min(100%, 760px); min-height: 1.76em; display: flex; align-items: flex-start; justify-content: center; animation: reveal-category .2s ease both; }
 .reveal-panel.reveal-cycling h1 { color: #bababa; }
 .reveal-panel.reveal-selected h1 { color: #fff; text-shadow: 0 0 30px rgba(255, 255, 255, .18); animation: reveal-final .48s cubic-bezier(.2, .85, .25, 1) both; }
 .reveal-panel.reveal-blackout { opacity: 0; }
@@ -55,7 +55,7 @@ input:focus { border-color: #ef4538; }
 .brief-topline { display: flex; justify-content: space-between; color: #8a8a8a; font-size: 11px; letter-spacing: .1em; border-bottom: 1px solid #272727; padding-bottom: 14px; }
 .brief-card { padding: clamp(20px, 4vh, 38px) 0; display: grid; grid-template-columns: 76px 1fr; gap: 22px; border-bottom: 1px solid #272727; }
 .brief-index { color: #ef4538; font-size: 16px; font-weight: 700; }
-.brief-card h1 { font-size: clamp(48px, 7vw, 88px); }
+.brief-card h1 { width: min(100%, 760px); min-height: 1.76em; display: flex; align-items: flex-start; font-size: clamp(48px, 7vw, 88px); }
 .brand-line { max-width: 540px; margin: 14px 0 0; font-size: clamp(16px, 1.6vw, 19px); color: #b3b3b3; line-height: 1.35; }
 .brief-copy { padding: clamp(16px, 3vh, 26px) 0; border-bottom: 1px solid #272727; }
 .brief-copy div { border: 1px solid #2b2b2b; border-radius: 12px; padding: clamp(16px, 2vw, 22px); background: #111; }
