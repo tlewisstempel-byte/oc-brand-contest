@@ -132,7 +132,7 @@ export default function Home() {
             <div>
               <div className="eyebrow">Your category</div>
               <h1>{brief.category}</h1>
-              <p className="brand-line">Make the name. Write the line. Build the visual.</p>
+              <p className="brand-line">You create the brand name, one-line description and finished hero visual.</p>
             </div>
           </div>
           <div className="brief-copy">
@@ -142,7 +142,7 @@ export default function Home() {
           <div className="entry-card">
             <div>
               <span>YOUR ENTRY</span>
-              <p>Quote the challenge post with your fictional brand name, a one-line description and one finished hero visual.</p>
+              <p>Make your own brand name, one-line description and hero visual. Then quote the challenge post with all three.</p>
             </div>
             <a className="primary-button" href="https://x.com/stackdailyxyz" target="_blank" rel="noreferrer">Open the challenge post <span>→</span></a>
           </div>
