@@ -136,8 +136,12 @@ export default function Home() {
             </div>
           </div>
           <div className="brief-copy">
-            <div><span>THE JOB</span><p>{brief.brief}</p></div>
-            <div><span>THE VISUAL</span><p>{brief.direction}</p></div>
+            <div>
+              <span>YOUR JOB</span>
+              <p>{brief.brief}</p>
+              <p className="job-requirements">Give the brand a name. Write a one-line description for your X post. Create one finished hero visual.</p>
+              <p className="job-direction">{brief.direction}</p>
+            </div>
           </div>
           <div className="entry-card">
             <div>
