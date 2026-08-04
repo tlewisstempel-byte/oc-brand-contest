@@ -21,7 +21,7 @@ h1 em { color: #ef4538; font-style: normal; }
 .primary-button:hover { transform: translateY(-2px); background: #fff; }
 .primary-button span { color: #ef4538; font-size: 23px; line-height: 0; }
 .landing-rule { height: 1px; background: #252525; margin: 76px 0 0; }
-.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #252525; border-top: 0; border-radius: 0 0 12px 12px; overflow: hidden; text-align: left; }
+.stat-row { display: grid; grid-template-columns: repeat(2, 1fr); border: 1px solid #252525; border-top: 0; border-radius: 0 0 12px 12px; overflow: hidden; text-align: left; }
 .stat-row div { min-height: 118px; padding: 26px; display: flex; flex-direction: column; justify-content: end; gap: 8px; }
 .stat-row div + div { border-left: 1px solid #252525; }
 .stat-row strong { font-size: 31px; letter-spacing: -.06em; }

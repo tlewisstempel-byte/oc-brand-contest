@@ -95,7 +95,6 @@ export default function Home() {
           <div className="stat-row" aria-label="Contest details">
             <div><strong>$500</strong><span>prize pool</span></div>
             <div><strong>5</strong><span>briefs to unlock</span></div>
-            <div><strong>07 AUG</strong><span>stream with Amir</span></div>
           </div>
           <p className="fine-print">Create an Open Campus ID to unlock your brief. No specific AI tool required.</p>
         </section>
