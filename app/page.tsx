@@ -90,7 +90,7 @@ export default function Home() {
           <div className="eyebrow">StackDaily x Open Campus</div>
           <h1>GET A BRAND BRIEF.<br />MAKE IT YOURS.<br /><em>WIN $500.</em></h1>
           <p className="lead">Five fictional brand briefs. One finished hero visual. Your entry could win $500 and be reviewed live by a top AI creative.</p>
-          <button className="primary-button" onClick={start}>Take part in the brand contest <span>→</span></button>
+          <button className="primary-button" onClick={start}>Sign up to take part in the brand contest <span>→</span></button>
           <div className="landing-rule" />
           <div className="stat-row" aria-label="Contest details">
             <div><strong>$500</strong><span>prize pool</span></div>
