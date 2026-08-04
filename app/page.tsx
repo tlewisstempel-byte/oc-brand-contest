@@ -38,6 +38,18 @@ const briefs: Brief[] = [
   }
 ];
 
+function getUniformRandomIndex(length: number) {
+  const range = 2 ** 32;
+  const limit = Math.floor(range / length) * length;
+  const value = new Uint32Array(1);
+
+  do {
+    window.crypto.getRandomValues(value);
+  } while (value[0] >= limit);
+
+  return value[0] % length;
+}
+
 function getBrief() {
   const saved = window.localStorage.getItem("oc-brand-brief");
   if (saved) {
@@ -45,7 +57,7 @@ function getBrief() {
     if (existing) return existing;
   }
 
-  const next = briefs[Math.floor(Math.random() * briefs.length)];
+  const next = briefs[getUniformRandomIndex(briefs.length)];
   window.localStorage.setItem("oc-brand-brief", next.id);
   return next;
 }
@@ -138,7 +150,7 @@ export default function Home() {
           <div className="entry-card">
             <div>
               <span>YOUR ENTRY</span>
-              <p>Quote the challenge post with your hero visual. Your copy must include:</p>
+              <p>Quote the challenge post with your hero visual as the asset. Your copy must include:</p>
               <ul className="entry-requirements">
                 <li>the brand name</li>
                 <li>the brand's one-liner</li>
