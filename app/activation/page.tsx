@@ -38,17 +38,17 @@ export default function ActivationPage() {
 
       {stage === "landing" && <section className="activation-hero">
         <div className="eyebrow">StackDaily / Event activation</div>
-        <h1>QUALIFY THE PEOPLE<br />WHO REACH<br />YOUR <em>BOOTH.</em></h1>
-        <p className="activation-lead">Give each attendee a path that matches how they can use your product. They can reserve it before the event or start at the booth.</p>
-        <button className="primary-button activation-cta" onClick={() => setStage("demo")}>SEE THE ATTENDEE FLOW <span>→</span></button>
-        <div className="activation-proof"><div><strong>BEFORE</strong><span>Reserve a path</span></div><div><strong>BOOTH</strong><span>Scan to enter</span></div><div><strong>AFTER</strong><span>Complete the product action</span></div></div>
-        <p className="activation-note">A digital layer around the event your team already paid for.</p>
+        <h1>NURTURE THE PEOPLE<br />HEADING TO YOUR <em>BOOTH.</em></h1>
+        <p className="activation-lead">We build the content plan that gives people a reason to engage before the event. At the booth, every route enters the same sponsor activation.</p>
+        <button className="primary-button activation-cta" onClick={() => setStage("demo")}>SEE THE ACTIVATION FLOW <span>→</span></button>
+        <div className="activation-proof"><div><strong>BEFORE</strong><span>Content plan and optional outbound</span></div><div><strong>BOOTH</strong><span>Scan to enter the activation</span></div><div><strong>PATH</strong><span>Choose the relevant product action</span></div></div>
+        <p className="activation-note">Pre-nurtured leads and booth visitors use the same path selection.</p>
         <a className="faq-link" href="/activation/faq">READ THE SPONSOR FAQ →</a>
       </section>}
 
       {stage === "demo" && <section className="activation-demo-intro">
         <div className="demo-kicker"><span>SPONSOR VIEW</span><span>ATTENDEE FLOW</span></div>
-        <div className="demo-split"><div><div className="eyebrow">The route</div><h2>SET THE PATH<br />BEFORE THEY<br /><em>ARRIVE.</em></h2><p>People can reserve a path before the event. Anyone at the booth can scan and enter. The sponsor receives the chosen path and the completed action.</p><div className="route-note"><span>BEFORE</span>Reserve your path<br /><span>AT THE BOOTH</span>Scan to enter</div><button className="primary-button" onClick={() => setStage("path")}>OPEN THE ATTENDEE FLOW <span>→</span></button></div>
+        <div className="demo-split"><div><div className="eyebrow">The route</div><h2>BUILD INTEREST<br />BEFORE THEY<br /><em>ARRIVE.</em></h2><p>The content plan starts the conversation. People can enter from a piece of content or scan at the booth. Both routes reach the same path selection.</p><div className="route-note"><span>CONTENT</span>Build intent before the event<br /><span>BOOTH QR</span>Enter the same flow</div><button className="primary-button" onClick={() => setStage("path")}>OPEN THE ACTIVATION FLOW <span>→</span></button></div>
           <div className="demo-card demo-card--preview"><div className="demo-card-topline"><span>SPONSOR / LIVE</span><span>STACKDAILY</span></div><div className="demo-card-body"><div className="eyebrow">Your challenge is ready</div><h3>CHOOSE<br />YOUR <em>PATH.</em></h3><p>Do something useful with the product. Unlock the reward that fits.</p><div className="fake-choices"><span>CREATOR</span><span>BUILDER</span><span>INVESTOR</span></div></div></div>
         </div>
       </section>}
