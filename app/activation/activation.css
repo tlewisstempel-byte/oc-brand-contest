@@ -1,0 +1,56 @@
+.activation-shell { min-height: 100dvh; padding: 18px clamp(24px, 7vw, 104px) 28px; background: radial-gradient(70% 70% at 50% 25%, #171717 0%, #050505 63%); color: #f7f7f5; }
+.activation-header { height: 44px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #252525; }
+.activation-header p { margin: 0; color: #6b6b6b; font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+.activation-header p span { color: #ed4134; }
+.activation-hero, .activation-demo-intro, .activation-attendee { max-width: 1100px; margin: 0 auto; }
+.activation-hero { min-height: calc(100dvh - 82px); display: flex; flex-direction: column; justify-content: center; text-align: center; align-items: center; }
+.activation-hero h1 { max-width: 1000px; }
+.activation-hero h1 em, .demo-split h2 em, .attendee-heading h2 em, .challenge-layout h2 em, .reward-view h2 em { color: #ef4538; font-style: normal; }
+.activation-lead { max-width: 580px; margin: 28px auto 26px; color: #adadad; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.45; }
+.activation-cta { min-width: min(100%, 490px); min-height: 70px; font-size: 16px; }
+.activation-proof { width: min(100%, 880px); margin-top: clamp(46px, 8vh, 88px); display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #272727; border-bottom: 1px solid #272727; text-align: left; }
+.activation-proof div { min-height: 100px; padding: 18px 22px; display: flex; flex-direction: column; justify-content: end; gap: 7px; }
+.activation-proof div + div { border-left: 1px solid #272727; }
+.activation-proof strong { color: #ef4538; font-size: 13px; letter-spacing: .1em; }
+.activation-proof span { color: #a4a4a4; font-size: 13px; line-height: 1.3; }
+.activation-note { color: #707070; font-size: 12px; line-height: 1.5; }
+.activation-hero .activation-note { margin-top: 14px; }
+.activation-demo-intro { padding-top: clamp(54px, 11vh, 120px); }
+.demo-kicker, .attendee-topline { display: flex; justify-content: space-between; border-bottom: 1px solid #282828; padding-bottom: 13px; color: #7d7d7d; font-size: 10px; letter-spacing: .12em; }
+.demo-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .78fr); gap: clamp(34px, 7vw, 110px); align-items: center; padding: clamp(54px, 10vh, 112px) 0; }
+.demo-split h2, .attendee-heading h2, .challenge-layout h2, .reward-view h2 { margin: 0; font-size: clamp(48px, 7vw, 94px); line-height: .88; letter-spacing: -.08em; }
+.demo-split p { max-width: 510px; margin: 26px 0 30px; color: #aaa; font-size: 17px; line-height: 1.45; }
+.demo-card { min-height: 450px; border: 1px solid #333; background: #111; border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.25); }
+.demo-card-topline { display: flex; justify-content: space-between; padding: 17px 20px; color: #777; font-size: 10px; letter-spacing: .1em; border-bottom: 1px solid #292929; }
+.demo-card-body { padding: 56px 42px; }
+.demo-card-body h3 { margin: 0; font-size: clamp(42px, 5vw, 68px); line-height: .88; letter-spacing: -.08em; }
+.demo-card-body h3 em { color: #ef4538; font-style: normal; }
+.demo-card-body p { margin: 22px 0 30px; color: #aaa; font-size: 15px; line-height: 1.4; }
+.fake-choices { display: grid; gap: 8px; }
+.fake-choices span { border: 1px solid #343434; border-radius: 999px; padding: 14px 16px; color: #ddd; font-size: 11px; letter-spacing: .1em; }
+.activation-attendee { padding-top: clamp(26px, 6vh, 64px); }
+.attendee-heading { padding: clamp(45px, 8vh, 92px) 0 34px; }
+.attendee-heading p { margin: 22px 0 0; color: #a8a8a8; font-size: 17px; }
+.path-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.path-card { position: relative; min-height: 220px; padding: 22px; border: 1px solid #303030; border-radius: 12px; background: #111; color: #f6f6f3; text-align: left; display: flex; flex-direction: column; align-items: flex-start; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.path-card:hover { transform: translateY(-4px); border-color: #ef4538; background: #171717; }
+.path-number { color: #ef4538; font-size: 12px; font-weight: 700; }
+.path-label { margin-top: auto; font-size: 27px; font-weight: 800; letter-spacing: -.06em; }
+.path-strap { max-width: 170px; margin-top: 8px; color: #999; font-size: 12px; line-height: 1.25; }
+.path-arrow { position: absolute; right: 20px; bottom: 17px; color: #ef4538; font-size: 26px; }
+.activation-attendee > .activation-note { margin-top: 13px; }
+.back-button { margin-bottom: 24px; padding: 0; border: 0; background: transparent; color: #999; font-size: 13px; }
+.challenge-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .66fr); gap: 7vw; align-items: center; padding: clamp(56px, 10vh, 120px) 0; }
+.challenge-copy { max-width: 580px; margin: 30px 0 12px; color: #f2f2ee; font-size: clamp(19px, 2vw, 26px); line-height: 1.15; letter-spacing: -.035em; }
+.challenge-detail { max-width: 500px; margin: 0 0 30px; color: #999; font-size: 15px; line-height: 1.45; }
+.reward-preview, .reward-unlock { border: 1px solid #3a3a3a; border-radius: 12px; padding: 28px; background: #111; }
+.reward-preview span, .reward-unlock span { color: #ef4538; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.reward-preview strong, .reward-unlock strong { display: block; margin-top: 70px; font-size: clamp(32px, 4vw, 52px); line-height: .9; letter-spacing: -.07em; }
+.reward-preview small, .reward-unlock small { display: block; margin-top: 24px; color: #777; font-size: 12px; }
+.reward-view { min-height: calc(100dvh - 82px); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+.reward-view > p { max-width: 500px; margin: 24px 0 28px; color: #aaa; font-size: 17px; line-height: 1.45; }
+.reward-unlock { width: min(100%, 470px); margin-bottom: 28px; text-align: left; background: #f3f2ee; color: #090909; border-color: #f3f2ee; }
+.reward-unlock span { color: #ef4538; }
+.reward-unlock strong { margin-top: 38px; font-size: clamp(30px, 4vw, 48px); }
+.reward-unlock small { color: #777; }
+@media (max-width: 760px) { .activation-shell { padding: 12px 16px 20px; } .activation-header { height: 36px; } .activation-header p { display: none; } .activation-hero { min-height: calc(100dvh - 62px); } .activation-hero h1 { font-size: clamp(45px, 14vw, 70px); } .activation-lead { margin: 18px auto 20px; font-size: 15px; } .activation-cta { min-width: 100%; min-height: 64px; font-size: 13px; } .activation-proof { margin-top: 42px; } .activation-proof div { min-height: 78px; padding: 12px 10px; } .activation-proof span { font-size: 10px; } .demo-split, .challenge-layout { grid-template-columns: 1fr; padding: 46px 0; } .demo-split h2, .attendee-heading h2, .challenge-layout h2, .reward-view h2 { font-size: clamp(45px, 14vw, 70px); } .demo-split p, .attendee-heading p { font-size: 15px; } .demo-card { min-height: 360px; } .demo-card-body { padding: 38px 24px; } .demo-card-body h3 { font-size: 48px; } .path-grid { grid-template-columns: 1fr; } .path-card { min-height: 140px; } .path-label { margin-top: 24px; font-size: 24px; } .path-strap { max-width: 240px; } .reward-preview { min-height: 230px; } .reward-preview strong { margin-top: 44px; } }
