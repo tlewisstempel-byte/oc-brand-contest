@@ -15,11 +15,15 @@
 .activation-proof span { color: #a4a4a4; font-size: 13px; line-height: 1.3; }
 .activation-note { color: #707070; font-size: 12px; line-height: 1.5; }
 .activation-hero .activation-note { margin-top: 14px; }
+.faq-link { margin-top: 18px; color: #888; font-size: 11px; font-weight: 700; letter-spacing: .1em; text-decoration: none; }
+.faq-link:hover { color: #ef4538; }
 .activation-demo-intro { padding-top: clamp(54px, 11vh, 120px); }
 .demo-kicker, .attendee-topline { display: flex; justify-content: space-between; border-bottom: 1px solid #282828; padding-bottom: 13px; color: #7d7d7d; font-size: 10px; letter-spacing: .12em; }
 .demo-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(360px, .78fr); gap: clamp(34px, 7vw, 110px); align-items: center; padding: clamp(54px, 10vh, 112px) 0; }
 .demo-split h2, .attendee-heading h2, .challenge-layout h2, .reward-view h2 { margin: 0; font-size: clamp(48px, 7vw, 94px); line-height: .88; letter-spacing: -.08em; }
 .demo-split p { max-width: 510px; margin: 26px 0 30px; color: #aaa; font-size: 17px; line-height: 1.45; }
+.route-note { margin: 0 0 30px; padding-left: 14px; border-left: 1px solid #ef4538; color: #aaa; font-size: 12px; line-height: 1.8; }
+.route-note span { display: inline-block; width: 92px; color: #ef4538; font-size: 10px; font-weight: 700; letter-spacing: .1em; }
 .demo-card { min-height: 450px; border: 1px solid #333; background: #111; border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,.25); }
 .demo-card-topline { display: flex; justify-content: space-between; padding: 17px 20px; color: #777; font-size: 10px; letter-spacing: .1em; border-bottom: 1px solid #292929; }
 .demo-card-body { padding: 56px 42px; }
@@ -43,6 +47,14 @@
 .challenge-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .66fr); gap: 7vw; align-items: center; padding: clamp(56px, 10vh, 120px) 0; }
 .challenge-copy { max-width: 580px; margin: 30px 0 12px; color: #f2f2ee; font-size: clamp(19px, 2vw, 26px); line-height: 1.15; letter-spacing: -.035em; }
 .challenge-detail { max-width: 500px; margin: 0 0 30px; color: #999; font-size: 15px; line-height: 1.45; }
+.mock-form { max-width: 540px; margin: 0; display: grid; gap: 10px; }
+.mock-form label { color: #9b9b9b; font-size: 11px; letter-spacing: .04em; }
+.mock-form input:not([type="checkbox"]), .mock-form select { width: 100%; min-height: 48px; border: 1px solid #343434; border-radius: 9px; padding: 0 14px; background: #101010; color: #f7f7f5; outline: none; }
+.mock-form input:not([type="checkbox"]):focus, .mock-form select:focus { border-color: #ef4538; }
+.mock-form select { margin-bottom: 8px; appearance: none; }
+.mock-form .primary-button { margin-top: 12px; justify-self: start; }
+.check-row { display: flex; align-items: center; gap: 9px; margin: 4px 0 6px; }
+.check-row input { accent-color: #ef4538; }
 .reward-preview, .reward-unlock { border: 1px solid #3a3a3a; border-radius: 12px; padding: 28px; background: #111; }
 .reward-preview span, .reward-unlock span { color: #ef4538; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
 .reward-preview strong, .reward-unlock strong { display: block; margin-top: 70px; font-size: clamp(32px, 4vw, 52px); line-height: .9; letter-spacing: -.07em; }
@@ -53,4 +65,21 @@
 .reward-unlock span { color: #ef4538; }
 .reward-unlock strong { margin-top: 38px; font-size: clamp(30px, 4vw, 48px); }
 .reward-unlock small { color: #777; }
-@media (max-width: 760px) { .activation-shell { padding: 12px 16px 20px; } .activation-header { height: 36px; } .activation-header p { display: none; } .activation-hero { min-height: calc(100dvh - 62px); } .activation-hero h1 { font-size: clamp(45px, 14vw, 70px); } .activation-lead { margin: 18px auto 20px; font-size: 15px; } .activation-cta { min-width: 100%; min-height: 64px; font-size: 13px; } .activation-proof { margin-top: 42px; } .activation-proof div { min-height: 78px; padding: 12px 10px; } .activation-proof span { font-size: 10px; } .demo-split, .challenge-layout { grid-template-columns: 1fr; padding: 46px 0; } .demo-split h2, .attendee-heading h2, .challenge-layout h2, .reward-view h2 { font-size: clamp(45px, 14vw, 70px); } .demo-split p, .attendee-heading p { font-size: 15px; } .demo-card { min-height: 360px; } .demo-card-body { padding: 38px 24px; } .demo-card-body h3 { font-size: 48px; } .path-grid { grid-template-columns: 1fr; } .path-card { min-height: 140px; } .path-label { margin-top: 24px; font-size: 24px; } .path-strap { max-width: 240px; } .reward-preview { min-height: 230px; } .reward-preview strong { margin-top: 44px; } }
+.faq-shell { overflow: auto; }
+.faq-hero { max-width: 900px; margin: 0 auto; padding: clamp(56px, 10vh, 120px) 0 clamp(70px, 12vh, 140px); }
+.faq-hero h1 { font-size: clamp(54px, 8vw, 108px); }
+.faq-hero .activation-lead { margin-left: 0; }
+.faq-hero .activation-cta { min-width: 340px; }
+.faq-list { max-width: 1100px; margin: 0 auto; padding-bottom: 90px; }
+.faq-list-heading { display: grid; grid-template-columns: 1fr 2fr; padding: 18px 0 22px; border-top: 1px solid #303030; border-bottom: 1px solid #303030; }
+.faq-list-heading span { color: #ef4538; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+.faq-list-heading strong { font-size: clamp(30px, 4vw, 52px); line-height: .9; letter-spacing: -.07em; }
+.faq-item { border-bottom: 1px solid #292929; }
+.faq-item summary { display: grid; grid-template-columns: 54px 1fr 28px; gap: 10px; align-items: center; padding: 23px 0; cursor: pointer; list-style: none; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary span { color: #ef4538; font-size: 11px; }
+.faq-item summary strong { font-size: clamp(17px, 2vw, 23px); letter-spacing: -.035em; }
+.faq-item summary b { color: #ef4538; font-size: 23px; font-weight: 400; text-align: right; }
+.faq-item[open] summary b { transform: rotate(45deg); }
+.faq-item p { max-width: 720px; margin: -4px 0 26px 64px; color: #a6a6a6; font-size: 15px; line-height: 1.5; }
+@media (max-width: 760px) { .activation-shell { padding: 12px 16px 20px; } .activation-header { height: 36px; } .activation-header p { display: none; } .activation-hero { min-height: calc(100dvh - 62px); } .activation-hero h1 { font-size: clamp(45px, 14vw, 70px); } .activation-lead { margin: 18px auto 20px; font-size: 15px; } .activation-cta { min-width: 100%; min-height: 64px; font-size: 13px; } .activation-proof { margin-top: 42px; } .activation-proof div { min-height: 78px; padding: 12px 10px; } .activation-proof span { font-size: 10px; } .demo-split, .challenge-layout { grid-template-columns: 1fr; padding: 46px 0; } .demo-split h2, .attendee-heading h2, .challenge-layout h2, .reward-view h2 { font-size: clamp(45px, 14vw, 70px); } .demo-split p, .attendee-heading p { font-size: 15px; } .demo-card { min-height: 360px; } .demo-card-body { padding: 38px 24px; } .demo-card-body h3 { font-size: 48px; } .path-grid { grid-template-columns: 1fr; } .path-card { min-height: 140px; } .path-label { margin-top: 24px; font-size: 24px; } .path-strap { max-width: 240px; } .reward-preview { min-height: 230px; } .reward-preview strong { margin-top: 44px; } .faq-hero { padding: 48px 0 72px; } .faq-hero h1 { font-size: clamp(48px, 14vw, 70px); } .faq-hero .activation-cta { min-width: 100%; } .faq-list-heading { grid-template-columns: 1fr; gap: 18px; } .faq-item summary { grid-template-columns: 35px 1fr 22px; padding: 19px 0; } .faq-item p { margin-left: 45px; font-size: 14px; } }
